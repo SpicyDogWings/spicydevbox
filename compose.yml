@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  apache2:
-    image: httpd:latest
-    container_name: spicydevbox-apache
-    ports:
-      - "8080:80"
-    restart: always
