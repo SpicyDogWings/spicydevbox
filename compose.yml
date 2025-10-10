@@ -16,3 +16,7 @@ services:
       context: .
       dockerfile: ./container-files/Containerfile_php-${PHP_VERSION:-latest}
     container_name: "php"
+    volumes:
+      - ./box:/var/www:Z,U
+    expose:
+      - "9000"
