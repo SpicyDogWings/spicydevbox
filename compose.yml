@@ -8,3 +8,9 @@ services:
       - ./box:/var/www:Z
     ports:
       - ${HTTPD_PORT:-8080}:80
+
+  php:
+    build:
+      context: .
+      dockerfile: ./container-files/Containerfile_php-${PHP_VERSION:-latest}
+    container_name: "php"
