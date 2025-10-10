@@ -2,7 +2,7 @@ services:
   httpd:
     build:
       context: .
-      dockerfile: ./container-files/Containerfile_httpd-${HTTPD_VERSION}
+      dockerfile: ./container-files/Containerfile_httpd-${HTTPD_VERSION:-latest}
     container_name: "httpd"
     ports:
-      - 8080:80
+      - ${HTTPD_PORT:-8080}:80
