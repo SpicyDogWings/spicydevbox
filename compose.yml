@@ -1,0 +1,6 @@
+services:
+  httpd:
+    image: httpd:latest
+    container_name: "httpd"
+    ports:
+      - 8080:80
