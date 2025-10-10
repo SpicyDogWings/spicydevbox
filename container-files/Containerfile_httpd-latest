@@ -8,4 +8,5 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 
 #   Copiar la configuración inicial
+COPY config/httpd/extra/httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
 COPY config/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
