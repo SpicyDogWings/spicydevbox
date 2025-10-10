@@ -1,6 +1,8 @@
 services:
   httpd:
-    image: httpd:latest
+    build:
+      context: .
+      dockerfile: ./container-files/Containerfile_httpd-latest
     container_name: "httpd"
     ports:
       - 8080:80
