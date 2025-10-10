@@ -9,4 +9,5 @@ RUN apt update && \
 
 #   Copiar la configuración inicial
 COPY config/httpd/extra/httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
+COPY config/httpd/extra/php-fpm.conf /usr/local/apache2/conf/extra/php-fpm.conf
 COPY config/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
