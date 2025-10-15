@@ -16,7 +16,7 @@ services:
       dockerfile: ./container-files/Containerfile_php-${PHP_VERSION:-latest}
     container_name: "php"
     volumes:
-      - ./box:/var/www:Z,U
+      - ./box:/var/www:z
     expose:
       - ${PHP_PORT:-9000}
     depends_on:
@@ -28,7 +28,7 @@ services:
       dockerfile: ./container-files/Containerfile_httpd-${HTTPD_VERSION:-latest}
     container_name: "httpd"
     volumes:
-      - ./box:/var/www:Z
+      - ./box:/var/www:z
     ports:
       - ${HTTPD_PORT:-8080}:80
     depends_on:
